@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 app.use(express.json());
-app.use(express.static('docs')); // Serve static files
+app.use(express.static('public')); // Serve static files
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/chatapp');
