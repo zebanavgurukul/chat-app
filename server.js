@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static('public')); // Serve static files
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/chatapp');
+mongoose.connect('mongodb://localhost:27017/chatapp', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define Schemas
 const userSchema = new mongoose.Schema({
